@@ -1156,7 +1156,7 @@ async function enviarImagemProduto(arquivo) {
 }
 
 
-
+let urlPreviewProduto = null;
 
 $("#produto-arquivo-imagem")?.addEventListener("change", (evento) => {
     const arquivo = evento.target.files[0];
