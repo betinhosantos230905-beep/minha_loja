@@ -1,0 +1,13 @@
+.env
+.venv/
+venv/
+__pycache__/
+*.pyc
+.vscode/
+.pytest_cache/
+.vercel/
+*.bak
+*.bak-*
+*.backup*
+flask_erro.txt
+flask_saida.txt
