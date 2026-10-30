@@ -1,13 +1,14 @@
+
 :root {
-  --red: #D9301F;
-  --red-dark: #B02214;
-  --orange: #F28C1B;
-  --ink: #221B17;
-  --muted: #6B615A;
-  --bg: #F7F5F3;
+  --red: #244A68;
+  --red-dark: #19364F;
+  --orange: #78A9BD;
+  --ink: #243746;
+  --muted: #647783;
+  --bg: #F4F0E7;
   --card: #FFFFFF;
-  --line: #E7E1DC;
-  --ok: #1E7B46;
+  --line: #E1E5E5;
+  --ok: #287A58;
   --danger-bg: #FDECEA;
 
   --font-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
@@ -16,6 +17,6 @@
   --s1: 4px; --s2: 8px; --s3: 12px; --s4: 16px; --s5: 24px; --s6: 32px;
   --radius: 14px;
   --radius-sm: 10px;
-  --shadow: 0 1px 2px rgba(34, 27, 23, .06), 0 4px 12px rgba(34, 27, 23, .05);
+  --shadow: 0 1px 2px rgba(36, 74, 104, .06), 0 4px 12px rgba(36, 74, 104, .05);
   --tap: 44px;
 }

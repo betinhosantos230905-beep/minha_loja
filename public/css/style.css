@@ -1,25 +1,25 @@
-
+﻿
 /* =========================================================
-   MINHA LOJA | CARDÁPIO ONLINE
+   MINHA LOJA | CARDÃPIO ONLINE
    Folha de estilos principal
-   Tema: verde sálvia, branco e tons naturais
+   Tema: verde sÃ¡lvia, branco e tons naturais
    ========================================================= */
 
 /* =========================
-   1. VARIÁVEIS DO PROJETO
+   1. VARIÃVEIS DO PROJETO
    ========================= */
 
 :root {
-  --red: #7D9B7A;
-  --red-dark: #536F52;
-  --orange: #DCE7D8;
+  --red: #244A68;
+  --red-dark: #19364F;
+  --orange: #78A9BD;
 
-  --bg: #F7F6F0;
+  --bg: #F4F0E7;
   --card: #FFFFFF;
-  --ink: #29352B;
-  --muted: #687568;
-  --line: #E0E6DC;
-  --danger-bg: #F8E9E6;
+  --ink: #243746;
+  --muted: #647783;
+  --line: #E1E5E5;
+  --danger-bg: #FDECEA;
 
   --font-body: "DM Sans", sans-serif;
   --font-display: "DM Sans", sans-serif;
@@ -36,16 +36,16 @@
   --s6: 32px;
 
   --shadow:
-    0 4px 16px rgba(41, 53, 43, 0.06);
+    0 4px 16px rgba(36, 74, 104, 0.06);
 
   --shadow-hover:
-    0 8px 24px rgba(41, 53, 43, 0.10);
+    0 8px 24px rgba(36, 74, 104, 0.10);
 
   --checkout-width: 560px;
 }
 
 /* =========================
-   2. RESET E CONFIGURAÇÕES
+   2. RESET E CONFIGURAÃ‡Ã•ES
    ========================= */
 
 *,
@@ -114,7 +114,7 @@ img {
   background: var(--red);
   color: #FFFFFF;
 
-  box-shadow: 0 2px 10px rgba(41, 53, 43, 0.08);
+  box-shadow: 0 2px 10px rgba(36, 55, 70, 0.08);
 }
 
 .logo {
@@ -136,7 +136,7 @@ img {
   height: 9px;
   margin-top: -10px;
 
-  background: #E8EDE4;
+  background: #EAF1F5;
   transform: rotate(45deg);
 }
 
@@ -187,15 +187,15 @@ img {
 }
 
 /* =========================
-   4. AVISO DE DEMONSTRAÇÃO
+   4. AVISO DE DEMONSTRAÃ‡ÃƒO
    ========================= */
 
 .demo-note {
   margin: 0;
   padding: var(--s2) var(--s4);
 
-  background: #E8EDE4;
-  color: #405A40;
+  background: #EAF1F5;
+  color: #31566F;
 
   font-size: .8rem;
   text-align: center;
@@ -262,7 +262,7 @@ img {
 }
 
 /* =========================
-   6. CARDÁPIO
+   6. CARDÃPIO
    ========================= */
 
 .menu {
@@ -309,7 +309,7 @@ img {
   text-align: left;
 
   background: var(--card);
-  border: 1px solid #E8EDE4;
+  border: 1px solid #EAF1F5;
   border-radius: var(--radius);
 
   box-shadow: var(--shadow);
@@ -321,7 +321,7 @@ img {
 }
 
 .card:hover:not([disabled]) {
-  border-color: #C9D8C5;
+  border-color: #C7D9E3;
   box-shadow: var(--shadow-hover);
 }
 
@@ -390,8 +390,8 @@ img {
 
   border-radius: 999px;
 
-  background: #E8EDE4;
-  color: #405A40;
+  background: #EAF1F5;
+  color: #31566F;
 
   font-size: .72rem;
   font-weight: 700;
@@ -447,7 +447,7 @@ img {
   }
 }
 
-/* Cabeçalho das janelas */
+/* CabeÃ§alho das janelas */
 
 .sheet-head {
   display: flex;
@@ -484,7 +484,7 @@ img {
   border: 0;
   border-radius: 50%;
 
-  background: #E8EDE4;
+  background: #EAF1F5;
   color: var(--ink);
 
   font-size: 1.3rem;
@@ -494,10 +494,10 @@ img {
 }
 
 .close:hover {
-  background: #DCE7D8;
+  background: #DCEAF0;
 }
 
-/* Conteúdo rolável */
+/* ConteÃºdo rolÃ¡vel */
 
 .sheet-body {
   flex: 1;
@@ -508,7 +508,7 @@ img {
   padding: 0 var(--s4) var(--s4);
 }
 
-/* Rodapé das janelas */
+/* RodapÃ© das janelas */
 
 .sheet-foot {
   display: flex;
@@ -526,7 +526,7 @@ img {
 }
 
 /* =========================
-   9. GRUPOS E OPÇÕES
+   9. GRUPOS E OPÃ‡Ã•ES
    ========================= */
 
 fieldset.group {
@@ -607,7 +607,7 @@ textarea {
 input:not([type="checkbox"]):not([type="radio"]):not([type="range"]),
 select,
 textarea {
-  border: 1px solid #DCE4D8;
+  border: 1px solid #DCE5EA;
   border-radius: 12px;
 
   background: #FFFFFF;
@@ -623,12 +623,12 @@ select:focus,
 textarea:focus {
   border-color: var(--red);
   outline: none;
-  box-shadow: 0 0 0 3px rgba(125, 155, 122, .16);
+  box-shadow: 0 0 0 3px rgba(36, 74, 104, .16);
 }
 
 input::placeholder,
 textarea::placeholder {
-  color: #879084;
+  color: #82919A;
   opacity: 1;
 }
 
@@ -651,7 +651,7 @@ textarea {
   display: inline-flex;
   align-items: center;
 
-  border: 1px solid #DCE4D8;
+  border: 1px solid #DCE5EA;
   border-radius: 999px;
 
   background: #FFFFFF;
@@ -673,7 +673,7 @@ textarea {
 }
 
 .stepper button:hover {
-  background: #E8EDE4;
+  background: #EAF1F5;
 }
 
 .stepper output {
@@ -684,7 +684,7 @@ textarea {
 }
 
 /* =========================
-   12. BOTÕES
+   12. BOTÃ•ES
    ========================= */
 
 .btn {
@@ -710,7 +710,7 @@ textarea {
 
 .btn:hover:not([disabled]) {
   background: var(--red-dark);
-  box-shadow: 0 4px 12px rgba(83, 111, 82, .18);
+  box-shadow: 0 4px 12px rgba(25, 54, 79, .18);
 }
 
 .btn:active:not([disabled]) {
@@ -725,12 +725,12 @@ textarea {
 }
 
 .btn.ghost {
-  background: #E8EDE4;
+  background: #EAF1F5;
   color: var(--ink);
 }
 
 .btn.ghost:hover:not([disabled]) {
-  background: #DCE7D8;
+  background: #DCEAF0;
 }
 
 .link {
@@ -815,7 +815,7 @@ textarea {
 }
 
 /* =========================
-   15. NOTIFICAÇÕES
+   15. NOTIFICAÃ‡Ã•ES
    ========================= */
 
 .toast {
@@ -876,7 +876,7 @@ textarea {
   height: 48px;
   padding: 0 16px;
 
-  border: 1px solid #DCE4D8;
+  border: 1px solid #DCE5EA;
   border-radius: 14px;
 
   outline: none;
@@ -887,7 +887,7 @@ textarea {
   font-family: var(--font-body), sans-serif;
   font-size: 14px;
 
-  box-shadow: 0 3px 12px rgba(41, 53, 43, .05);
+  box-shadow: 0 3px 12px rgba(36, 55, 70, .05);
 
   transition:
     border-color .2s ease,
@@ -895,12 +895,12 @@ textarea {
 }
 
 .search input::placeholder {
-  color: #788276;
+  color: #71838E;
 }
 
 .search input:focus {
   border-color: var(--red);
-  box-shadow: 0 0 0 3px rgba(125, 155, 122, .18);
+  box-shadow: 0 0 0 3px rgba(36, 74, 104, .18);
 }
 
 .search input::-webkit-search-cancel-button {
@@ -908,13 +908,13 @@ textarea {
 }
 
 /* =========================================================
-   17. CHECKOUT — FINALIZAÇÃO DO PEDIDO
+   17. CHECKOUT â€” FINALIZAÃ‡ÃƒO DO PEDIDO
    ========================================================= */
 
 /*
    Estas regras melhoram o checkout sem alterar o JavaScript.
-   Os seletores são limitados ao diálogo de checkout para
-   evitar mudanças involuntárias em outras janelas.
+   Os seletores sÃ£o limitados ao diÃ¡logo de checkout para
+   evitar mudanÃ§as involuntÃ¡rias em outras janelas.
 */
 
 /* Caixa principal do checkout */
@@ -926,7 +926,7 @@ textarea {
 
   margin: auto;
 
-  border: 1px solid rgba(224, 230, 220, .9);
+  border: 1px solid rgba(225, 229, 229, .9);
   border-radius: 22px;
 
   background: var(--card);
@@ -959,7 +959,7 @@ textarea {
   }
 }
 
-/* Cabeçalho do checkout */
+/* CabeÃ§alho do checkout */
 
 #checkout-dialog .sheet-head {
   flex-shrink: 0;
@@ -983,7 +983,7 @@ textarea {
   line-height: 1.5;
 }
 
-/* Área rolável do formulário */
+/* Ãrea rolÃ¡vel do formulÃ¡rio */
 
 #checkout-dialog .sheet-body {
   padding: 8px 22px 24px;
@@ -993,19 +993,19 @@ textarea {
   overscroll-behavior: contain;
 }
 
-/* Rótulos dos campos */
+/* RÃ³tulos dos campos */
 
 #checkout-dialog label.lbl {
   margin-top: 18px;
   margin-bottom: 7px;
 
-  color: #354637;
+  color: #31566F;
   font-size: .88rem;
   font-weight: 700;
   line-height: 1.4;
 }
 
-/* Campos de texto, telefone, CEP e número */
+/* Campos de texto, telefone, CEP e nÃºmero */
 
 #checkout-dialog input:not([type="checkbox"]):not([type="radio"]):not([type="range"]),
 #checkout-dialog select,
@@ -1018,7 +1018,7 @@ textarea {
   margin-top: 7px;
   padding: 12px 14px;
 
-  border: 1px solid #DCE4D8;
+  border: 1px solid #DCE5EA;
   border-radius: 12px;
 
   background: #FFFFFF;
@@ -1028,7 +1028,7 @@ textarea {
   font-size: 16px;
   line-height: 1.4;
 
-  box-shadow: 0 1px 2px rgba(41, 53, 43, .025);
+  box-shadow: 0 1px 2px rgba(36, 55, 70, .025);
 
   transition:
     border-color .2s ease,
@@ -1039,7 +1039,7 @@ textarea {
 #checkout-dialog input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):hover,
 #checkout-dialog select:hover,
 #checkout-dialog textarea:hover {
-  border-color: #B8CBB4;
+  border-color: #B9D0DC;
 }
 
 #checkout-dialog input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):focus,
@@ -1048,7 +1048,7 @@ textarea {
   border-color: var(--red-dark);
   outline: none;
   background: #FFFFFF;
-  box-shadow: 0 0 0 3px rgba(125, 155, 122, .16);
+  box-shadow: 0 0 0 3px rgba(36, 74, 104, .16);
 }
 
 #checkout-dialog input::placeholder,
@@ -1057,7 +1057,7 @@ textarea {
   opacity: 1;
 }
 
-/* Área de observações */
+/* Ãrea de observaÃ§Ãµes */
 
 #checkout-dialog textarea {
   min-height: 96px;
@@ -1065,23 +1065,23 @@ textarea {
   line-height: 1.5;
 }
 
-/* Campos de seleção */
+/* Campos de seleÃ§Ã£o */
 
 #checkout-dialog select {
   padding-right: 36px;
   cursor: pointer;
 }
 
-/* Endereço */
+/* EndereÃ§o */
 
 #checkout-dialog .checkout-address {
   margin-top: 18px;
   padding: 16px;
 
-  border: 1px solid #E0E8DC;
+  border: 1px solid #E1E8EB;
   border-radius: 16px;
 
-  background: #F8FAF6;
+  background: #F5F8F9;
 }
 
 #checkout-dialog .checkout-address > label:first-child,
@@ -1093,7 +1093,7 @@ textarea {
   margin-top: 14px;
 }
 
-/* Separação visual entre seções do formulário */
+/* SeparaÃ§Ã£o visual entre seÃ§Ãµes do formulÃ¡rio */
 
 #checkout-dialog .sheet-body > h4,
 #checkout-dialog .sheet-body > .section-title {
@@ -1104,7 +1104,7 @@ textarea {
   font-weight: 800;
 }
 
-/* Grupos de opções dentro do checkout */
+/* Grupos de opÃ§Ãµes dentro do checkout */
 
 #checkout-dialog fieldset.group {
   margin-top: 18px;
@@ -1119,7 +1119,7 @@ textarea {
 #checkout-dialog fieldset.group legend {
   padding: 0 7px;
 
-  color: #354637;
+  color: #31566F;
   font-size: .9rem;
   font-weight: 800;
 }
@@ -1129,7 +1129,7 @@ textarea {
   background: var(--danger-bg);
 }
 
-/* Opções de entrega, retirada e pagamento */
+/* OpÃ§Ãµes de entrega, retirada e pagamento */
 
 #checkout-dialog .opt {
   gap: 11px;
@@ -1153,7 +1153,7 @@ textarea {
   font-size: .9rem;
 }
 
-/* Informações auxiliares */
+/* InformaÃ§Ãµes auxiliares */
 
 #checkout-dialog .rule,
 #checkout-dialog .hint {
@@ -1167,7 +1167,7 @@ textarea {
   margin-top: 8px;
 }
 
-/* Botões inferiores do checkout */
+/* BotÃµes inferiores do checkout */
 
 #checkout-dialog .sheet-foot {
   flex-shrink: 0;
@@ -1178,7 +1178,7 @@ textarea {
   border-top: 1px solid var(--line);
 
   background: #FFFFFF;
-  box-shadow: 0 -4px 14px rgba(41, 53, 43, .035);
+  box-shadow: 0 -4px 14px rgba(36, 55, 70, .035);
 }
 
 #checkout-dialog .sheet-foot .btn {
@@ -1188,22 +1188,22 @@ textarea {
 }
 
 #checkout-dialog .sheet-foot .btn:not(.ghost) {
-  box-shadow: 0 4px 10px rgba(83, 111, 82, .13);
+  box-shadow: 0 4px 10px rgba(25, 54, 79, .13);
 }
 
 #checkout-dialog .sheet-foot .btn:not(.ghost):hover:not([disabled]) {
   background: var(--red-dark);
 }
 
-/* Botão secundário */
+/* BotÃ£o secundÃ¡rio */
 
 #checkout-dialog .sheet-foot .btn.ghost {
-  border: 1px solid #DCE4D8;
-  background: #F5F7F2;
+  border: 1px solid #DCE5EA;
+  background: #F0F5F7;
 }
 
 #checkout-dialog .sheet-foot .btn.ghost:hover:not([disabled]) {
-  background: #E8EDE4;
+  background: #EAF1F5;
 }
 
 /* Estado de erro dos campos */
@@ -1290,7 +1290,7 @@ textarea {
   }
 }
 
-/* Tablets e telas intermediárias */
+/* Tablets e telas intermediÃ¡rias */
 
 @media (min-width: 720px) {
   .topbar {
@@ -1404,7 +1404,7 @@ textarea {
 
 
 
-/* ---------- Cupons na área do cliente ---------- */
+/* ---------- Cupons na Ã¡rea do cliente ---------- */
 
 .coupons-section {
   padding: 16px;
@@ -1737,7 +1737,7 @@ textarea {
   }
 }
 
-/* Imagens dos produtos no cardápio */
+/* Imagens dos produtos no cardÃ¡pio */
 .thumb.has-image {
   overflow: hidden;
   padding: 0;
@@ -1751,7 +1751,7 @@ textarea {
   border-radius: inherit;
 }
 /* =========================
-   RODAPÉ
+   RODAPÃ‰
    ========================= */
 
 .rodape {
@@ -1860,7 +1860,7 @@ textarea {
 
 
 
-/* Acompanhamento de pedidos compacto e dinâmico */
+/* Acompanhamento de pedidos compacto e dinÃ¢mico */
 #order-track-dialog {
   box-sizing: border-box;
   width: min(100% - 24px, 440px);
@@ -1900,3 +1900,4 @@ textarea {
     border-radius: 20px;
   }
 }
+
