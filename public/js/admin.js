@@ -1193,7 +1193,6 @@ $("#produto-arquivo-imagem")?.addEventListener("change", (evento) => {
 });
 
 
-
 function abrirFormularioProduto(produto = null) {
     
     $("#formulario-produto-card").hidden = false;
