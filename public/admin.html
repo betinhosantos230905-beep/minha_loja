@@ -194,8 +194,30 @@
                     >
                     <p class="mensagem">O preço promocional deve ser menor que o preço normal.</p>
 
-                    <label for="produto-imagem">URL da imagem</label>
-                    <input id="produto-imagem" type="url" maxlength="255">
+                    <label for="produto-arquivo-imagem">Selecionar imagem do computador</label>
+<input
+    id="produto-arquivo-imagem"
+    type="file"
+    accept="image/png,image/jpeg,image/webp,image/gif"
+>
+
+<div id="produto-upload-status" class="mensagem" hidden></div>
+
+<div id="produto-imagem-preview-container" hidden>
+    <img
+        id="produto-imagem-preview"
+        alt="Prévia da imagem do produto"
+        style="max-width: 180px; max-height: 180px; object-fit: contain; border-radius: 8px;"
+    >
+</div>
+
+<label for="produto-imagem">URL da imagem (opcional)</label>
+<input
+    id="produto-imagem"
+    type="url"
+    maxlength="255"
+    placeholder="A URL será preenchida após o upload"
+>
 
                     <label for="produto-preparo">Tempo de preparo (minutos)</label>
                     <input id="produto-preparo" type="number" min="0" max="65535">

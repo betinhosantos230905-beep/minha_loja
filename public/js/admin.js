@@ -59,9 +59,11 @@ async function requisicao(caminho, opcoes = {}) {
         credentials: "same-origin",
         ...opcoes,
         headers: {
-            "Content-Type": "application/json",
-            ...(opcoes.headers || {})
-        }
+    ...(opcoes.body instanceof FormData
+        ? {}
+        : { "Content-Type": "application/json" }),
+    ...(opcoes.headers || {})
+}
     });
  
     const dados = await resposta.json().catch(() => ({}));
@@ -1098,7 +1100,102 @@ function renderizarProdutos() {
     }
 }
  
+
+async function enviarImagemProduto(arquivo) {
+    if (!arquivo) return null;
+
+    const tiposPermitidos = [
+        "image/jpeg",
+        "image/png",
+        "image/webp",
+        "image/gif"
+    ];
+
+    if (!tiposPermitidos.includes(arquivo.type)) {
+        throw new Error("Formato de imagem não permitido.");
+    }
+
+    if (arquivo.size > 5 * 1024 * 1024) {
+        throw new Error("A imagem deve ter no máximo 5 MB.");
+    }
+
+    const assinatura = await requisicao(
+        "/produtos/upload-assinatura",
+        {
+            method: "POST",
+            body: JSON.stringify({})
+        }
+    );
+
+    const dados = new FormData();
+
+    dados.append("file", arquivo);
+    dados.append("api_key", assinatura.api_key);
+    dados.append("timestamp", assinatura.timestamp);
+    dados.append("folder", assinatura.folder);
+    dados.append("signature", assinatura.signature);
+
+    const resposta = await fetch(
+        `https://api.cloudinary.com/v1_1/${assinatura.cloud_name}/image/upload`,
+        {
+            method: "POST",
+            body: dados
+        }
+    );
+
+    const resultado = await resposta.json().catch(() => ({}));
+
+    if (!resposta.ok || !resultado.secure_url) {
+        throw new Error(
+            resultado.error?.message ||
+            "Não foi possível enviar a imagem ao Cloudinary."
+        );
+    }
+
+    return resultado.secure_url;
+}
+
+
+
+
+$("#produto-arquivo-imagem")?.addEventListener("change", (evento) => {
+    const arquivo = evento.target.files[0];
+    const preview = $("#produto-imagem-preview");
+    const container = $("#produto-imagem-preview-container");
+    const status = $("#produto-upload-status");
+
+    if (urlPreviewProduto) {
+        URL.revokeObjectURL(urlPreviewProduto);
+        urlPreviewProduto = null;
+    }
+
+    if (!arquivo) {
+        container.hidden = true;
+        preview.removeAttribute("src");
+        status.hidden = true;
+        return;
+    }
+
+    if (!arquivo.type.startsWith("image/")) {
+        evento.target.value = "";
+        container.hidden = true;
+        status.textContent = "Selecione um arquivo de imagem válido.";
+        status.hidden = false;
+        return;
+    }
+
+    urlPreviewProduto = URL.createObjectURL(arquivo);
+    preview.src = urlPreviewProduto;
+    container.hidden = false;
+
+    status.textContent = "Imagem selecionada. Ela será enviada ao salvar o produto.";
+    status.hidden = false;
+});
+
+
+
 function abrirFormularioProduto(produto = null) {
+    
     $("#formulario-produto-card").hidden = false;
     $("#form-produto").reset();
  
@@ -1209,14 +1306,28 @@ $("#form-produto")?.addEventListener("submit", async (evento) => {
         return;
     }
  
-    const botaoSalvar = evento.submitter;
- 
-    if (botaoSalvar) {
-        botaoSalvar.disabled = true;
+   const botaoSalvar = evento.submitter;
+const arquivoImagem = $("#produto-arquivo-imagem")?.files[0];
+const statusUpload = $("#produto-upload-status");
+
+if (botaoSalvar) {
+    botaoSalvar.disabled = true;
+}
+
+try {
+    if (arquivoImagem) {
+        statusUpload.textContent = "Enviando imagem...";
+        statusUpload.hidden = false;
+
+        const imagemEnviada = await enviarImagemProduto(arquivoImagem);
+
+        produto.image_url = imagemEnviada;
+        $("#produto-imagem").value = imagemEnviada;
+
+        statusUpload.textContent = "Imagem enviada com sucesso!";
     }
- 
-    try {
-        if (id) {
+
+    if (id) {
             await requisicao(`/produtos/${id}`, {
                 method: "PATCH",
                 body: JSON.stringify(produto)
